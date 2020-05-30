@@ -7,6 +7,45 @@
   <groupId>com.rr.opensource</groupId>
   <artifactId>native-sql-helper</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>${project.groupId}:${project.artifactId}</name>
+  <description>
+    This library will help developers to map native sql query result to a pojo class
+  </description>
+  <url>https://github.com/RAHULRAJSONU/native-sql-helper</url>
+
+  <licenses>
+    <license>
+      <name>GNU General Public License v3.0</name>
+      <url>https://www.gnu.org/licenses/why-not-lgpl.html</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>Rahul Raj</name>
+      <email>rajrahul9939@gmail.com</email>
+      <organization>rr</organization>
+      <organizationUrl>comming soon</organizationUrl>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:git://github.com/RAHULRAJSONU/native-sql-helper.git</connection>
+    <developerConnection>scm:git:ssh://github.com:RAHULRAJSONU/native-sql-helper.git</developerConnection>
+    <url>https://github.com/RAHULRAJSONU/native-sql-helper</url>
+  </scm>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>5.0.0-M4</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
   <build>
     <plugins>
       <plugin>
@@ -19,16 +58,5 @@
       </plugin>
     </plugins>
   </build>
-  <packaging>jar</packaging>
-
-  <dependencies>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-api</artifactId>
-      <version>5.0.0-M4</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-
 
 </project>
