@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.rr.opensource</groupId>
+  <artifactId>native-sql-helper</artifactId>
+  <versioning>
+    <versions>
+      <version>1.0-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20200530184727</lastUpdated>
+  </versioning>
+</metadata>
