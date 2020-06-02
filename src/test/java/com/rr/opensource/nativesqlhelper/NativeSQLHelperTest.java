@@ -20,7 +20,7 @@ class NativeSQLHelperTest {
 
   @Test
   public void testMapToModel() throws InstantiationException, IllegalAccessException {
-    Object[] rs = {"rahul","raj",112,"sample"};
+    Object[] rs = {"rahul","raj","112","sample"};
     Object[] rs1 = {"rangan","basu",113,"sample"};
     Object[] rs2 = {"rohan","sharma",114,"sample"};
 
@@ -38,6 +38,7 @@ class NativeSQLHelperTest {
     String firstName;
     String lastName;
     String company;
+    String department;
 
     public Employee() {
     }

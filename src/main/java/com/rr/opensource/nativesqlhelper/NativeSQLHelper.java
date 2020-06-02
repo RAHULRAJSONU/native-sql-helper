@@ -9,7 +9,7 @@ import java.util.stream.IntStream;
 
 /**
  * Helper Library for native SQL
- * @author Rahul raj mailto:rajrahul9939@gmail.com
+ * @author Rahul raj
  * @since 1.0-SNAPSHOT (May 31, 2020)
  */
 public class NativeSQLHelper {
@@ -30,13 +30,13 @@ public class NativeSQLHelper {
   /**
    * API to map native sql result list to list of pojo
    *
-   * @param resultList List of object array
-   * @param type type of pojo class
+   * @param resultList {@code List<Object[]>} List of object array
+   * @param type Type you want to map eg; {@code Pojo.class}
    * @param columnInOrder array of column used in select query in the same order
-   *                      eg; "select col1, col2, col3 from table 1"
-   *                      then: {"col1","col2","col3"}
+   *                      eg; {@code "select col1, col2, col3 from table 1"}
+   *                      then: {@code {"col1","col2","col3"}}
    * @param <T>
-   * @return List<Pojo>
+   * @return {@code List<Pojo> - List of mapped pojo}
    * @throws IllegalAccessException
    * @throws InstantiationException
    */
@@ -61,14 +61,17 @@ public class NativeSQLHelper {
     Class<?> zclass = object.getClass();
     for (Field field : zclass.getDeclaredFields()) {
       field.setAccessible(true);
-      String column = field.getName().replace("get","");
-      Object value = results[columnMap.get(column)];
-      Class<?> type = field.getType();
-      if (isPrimitive(type)) {//check primitive type(Point 5)
-        Class<?> boxed = boxPrimitiveClass(type);//box if primitive(Point 6)
-        value = boxed.cast(value);
+      if(columnMap.containsKey(field.getName())) {
+        Object value = results[columnMap.get(field.getName())];
+        Class<?> type = field.getType();
+        if (isPrimitive(type)) {
+          Class<?> boxed = boxPrimitiveClass(type);
+          value = boxed.cast(value);
+        }
+        field.set(object, AutoTypeCast.parse(type,String.valueOf(value)));
+      }else {
+        field.set(object, null);
       }
-      field.set(object, value);
     }
   }
 
