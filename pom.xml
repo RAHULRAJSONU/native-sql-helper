@@ -4,7 +4,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.rr.opensource</groupId>
+  <groupId>io.github.rahulrajsonu</groupId>
   <artifactId>native-sql-helper</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
@@ -26,7 +26,7 @@
     <developer>
       <name>Rahul Raj</name>
       <email>rajrahul9939@gmail.com</email>
-      <organization>rr</organization>
+      <organization>open source</organization>
       <organizationUrl>comming soon</organizationUrl>
     </developer>
   </developers>
@@ -126,6 +126,19 @@
           <nexusUrl>https://oss.sonatype.org/</nexusUrl>
           <autoReleaseAfterClose>false</autoReleaseAfterClose>
         </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>2.8.2</version>
+        <executions>
+          <execution>
+            <id>default-deploy</id>
+            <phase>deploy</phase>
+            <goals>
+              <goal>deploy</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>

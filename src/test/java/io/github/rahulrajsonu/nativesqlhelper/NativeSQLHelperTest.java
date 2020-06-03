@@ -1,4 +1,4 @@
-package com.rr.opensource.nativesqlhelper;
+package io.github.rahulrajsonu.nativesqlhelper;
 
 import static org.junit.jupiter.api.Assertions.*;
 

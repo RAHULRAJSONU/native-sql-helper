@@ -1,4 +1,4 @@
-package com.rr.opensource.nativesqlhelper;
+package io.github.rahulrajsonu.nativesqlhelper;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;

@@ -1,4 +1,4 @@
-package com.rr.opensource.nativesqlhelper;
+package io.github.rahulrajsonu.nativesqlhelper;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -17,7 +17,7 @@ public class NativeSQLHelper {
   /**
    * API to build string for where clause (IN)
    *
-   * @param attributes List<String> eg; ["param1","param2","param3"]
+   * @param attributes {@code List<String>} eg; ["param1","param2","param3"]
    * @return String eg; ('param1','param2','param3')
    */
   public static StringBuilder buildStringForInQuery(List<String> attributes) {
@@ -35,7 +35,7 @@ public class NativeSQLHelper {
    * @param columnInOrder array of column used in select query in the same order
    *                      eg; {@code "select col1, col2, col3 from table 1"}
    *                      then: {@code {"col1","col2","col3"}}
-   * @param <T>
+   * @param <T> - Type of Pojo
    * @return {@code List<Pojo> - List of mapped pojo}
    * @throws IllegalAccessException
    * @throws InstantiationException
